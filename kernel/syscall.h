@@ -20,3 +20,5 @@
 #define SYS_link   19
 #define SYS_mkdir  20
 #define SYS_close  21
+// Exercise 2.9 free system memory
+#define SYS_freemem 22

@@ -63,6 +63,7 @@ void            ramdiskrw(struct buf*);
 void*           kalloc(void);
 void            kfree(void *);
 void            kinit(void);
+int             kfreepages(void); // Exercise 2.9 Get system free memory
 
 // log.c
 void            initlog(int, struct superblock*);

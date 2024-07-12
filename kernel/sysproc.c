@@ -89,3 +89,11 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+
+// Exercise 2.9 return system free memory
+uint64
+sys_freemem(void)
+{
+  return kfreepages();
+}

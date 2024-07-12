@@ -39,6 +39,27 @@ freerange(void *pa_start, void *pa_end)
     kfree(p);
 }
 
+
+// Exercise 2.9 Get system free memory
+int
+kfreepages() {
+  struct run *r;
+  int free_pages_count = 0;
+
+  acquire(&kmem.lock);
+
+  // Iterate over free pages
+  r = kmem.freelist;
+  while(r) {
+    r = r->next;
+    free_pages_count++;
+  }
+  
+  release(&kmem.lock);
+
+  return free_pages_count * PGSIZE;
+}
+
 // Free the page of physical memory pointed at by pa,
 // which normally should have been returned by a
 // call to kalloc().  (The exception is when
