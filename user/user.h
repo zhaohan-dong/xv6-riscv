@@ -22,7 +22,8 @@ int getpid(void);
 char *sbrk(int);
 int sleep(int);
 int uptime(void);
-int freemem(void); // Excercise 2.9 Get system free memory
+int freemem(void);         // Exercise 2.9 Get system free memory
+struct proc *myproc(void); // Exercise 3.10.2
 
 // ulib.c
 int stat(const char *, struct stat *);

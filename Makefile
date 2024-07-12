@@ -134,6 +134,7 @@ UPROGS=\
 	$U/_zombie\
 	$U/_pingpong\
 	$U/_free\
+	$U/_growmem\
 
 fs.img: mkfs/mkfs README $(UPROGS)
 	mkfs/mkfs fs.img README $(UPROGS)
